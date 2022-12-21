@@ -1,7 +1,15 @@
+// Used to have to import react to use JSX, now you don't
+// import React from 'react';
+
 // Create component using function, not class
 function App() {
+    // Return either a div or a fragment with nested html elements
     return (
-        <h1>Hello from the app component</h1>
+        // Have to use className instead of class because 'class' is protected
+        <div className='container'>
+            <h1>My app</h1>
+            <p>Hello</p>
+        </div>
     )
 }
 

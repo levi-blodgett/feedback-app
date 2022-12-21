@@ -14,3 +14,5 @@ Add index.js file
 Create first component, app.js
     Components can be either classes or functions, classes is the older method for components, with more modern react components you will see hooks to use state and lifecycle
     We want to return jsx, JavaScript XML, syntax extension that allows us to have syntactic sugar to put HTML directly into our JavaScript
+    Can only return one element at a time, but you can have nested elements inside of a div, for instance
+        Instead of a div, you can have an empty fragment like '<>' that will make the html elements that are nested be directly inside of the root div
