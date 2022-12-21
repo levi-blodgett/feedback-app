@@ -1,6 +1,3 @@
-// Used to have to import react to use JSX, now you don't
-// import React from 'react';
-
 // Create component using function, not class
 function App() {
     // Return either a div or a fragment with nested html elements
@@ -13,4 +10,5 @@ function App() {
     )
 }
 
+// Export component so it can be used in index.js
 export default App
