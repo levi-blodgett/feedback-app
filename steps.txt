@@ -5,3 +5,12 @@ git init
 *create repo on github*
 git remote add origin https://github.com/levi-blodgett/feedback-app.git
 git add .; git commit -m "init repo"; git push -u origin master;
+Update readme.md
+Delete feedback-app/src directory so we can recreate it from scratch
+Create new src directory
+Add index.js file
+     Will be the main file used for putting together components for the SPA (single page application)
+     Since React is made of components, we need to make each component and then use render to insert it into the DOM directly, creating a much more organized app structure
+Create first component, app.js
+    Components can be either classes or functions, classes is the older method for components, with more modern react components you will see hooks to use state and lifecycle
+    We want to return jsx, JavaScript XML, syntax extension that allows us to have syntactic sugar to put HTML directly into our JavaScript
