@@ -18,3 +18,6 @@ Create first component, app.js
         Instead of a div, you can have an empty fragment like '<>' that will make the html elements that are nested be directly inside of the root div
 Create a dev dir with an App.js for testing features & learning
     Experimented with conditionals, dynamic values, and lists in JSX
+Create new components dir in src
+Generate boilerplate header component with ES7 snippets extension
+Customize header component
