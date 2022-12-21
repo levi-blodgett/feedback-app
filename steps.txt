@@ -17,3 +17,4 @@ Create first component, app.js
     Can only return one element at a time, but you can have nested elements inside of a div, for instance
         Instead of a div, you can have an empty fragment like '<>' that will make the html elements that are nested be directly inside of the root div
 Create a dev dir with an App.js for testing features & learning
+    Experimented with conditionals, dynamic values, and lists in JSX
