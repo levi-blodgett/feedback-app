@@ -21,3 +21,5 @@ Create a dev dir with an App.js for testing features & learning
 Create new components dir in src
 Generate boilerplate header component with ES7 snippets extension
 Customize header component
+Take css from: /bradtraversy/feedback-app/main/src/index.css
+Added styling directly in Header.jsx
