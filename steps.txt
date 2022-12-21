@@ -1,4 +1,7 @@
 https://reactjs.org/docs/create-a-new-react-app.html:
 npx create-react-app feedback-app --use-npm
 cd feedback-app
-npm start
+git init
+*create repo on github*
+git remote add origin https://github.com/levi-blodgett/feedback-app.git
+git add .; git commit -m "init repo"; git push -u origin master;
