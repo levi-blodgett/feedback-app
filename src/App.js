@@ -1,17 +1,21 @@
-// Import header
+// Import Components & useState
+import { useState } from 'react'
 import Header from './components/Header'
-// Import Feedback Item
+import FeedbackData from './data/FeedbackData'
 import FeedbackItem from './components/FeedbackItem'
+import FeedbackList from './components/FeedbackList'
 
-// Create component using function, not class
+// Create main app using function, not class
 function App() {
+    // Init state
+    const [feedback, setFeedback] = useState(FeedbackData)
     // Return either a div or a fragment with nested html elements
     return (
         <>
             <Header />
             {/* className, 'class' is protected */}
             <div className='container'>
-                <FeedbackItem />
+                <FeedbackList feedback={feedback} />
             </div>
         </>
     )

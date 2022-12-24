@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // Import main css
 import './index.css';
-// Import App component
+// Import main js
 import App from './App';
 
 // Create root

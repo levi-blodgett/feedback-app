@@ -26,3 +26,5 @@ Added styling directly in Header.jsx
 Create FeedbackItem.jsx & practice state within inside /src/dev
     done via "usestate" hook
         state in react is immutable meaning it can't be directly changed, it has to be changed via calling a function that does so.
+Create FeedbackList.jsx & FeedbackData.js and edit FeedbackItem.jsx & App.js so we can use global state
+    More layers added in, need to have FeedbackList changed to a function that can be iterated over and pass the data in through it
