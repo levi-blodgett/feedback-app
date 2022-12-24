@@ -23,3 +23,6 @@ Generate boilerplate header component with ES7 snippets extension
 Customize header component
 Take css from: /bradtraversy/feedback-app/main/src/index.css
 Added styling directly in Header.jsx
+Create FeedbackItem.jsx & practice state within inside /src/dev
+    done via "usestate" hook
+        state in react is immutable meaning it can't be directly changed, it has to be changed via calling a function that does so.

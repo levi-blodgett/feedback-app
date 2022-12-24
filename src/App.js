@@ -1,5 +1,7 @@
 // Import header
 import Header from './components/Header'
+// Import Feedback Item
+import FeedbackItem from './components/FeedbackItem'
 
 // Create component using function, not class
 function App() {
@@ -9,7 +11,7 @@ function App() {
             <Header />
             {/* className, 'class' is protected */}
             <div className='container'>
-                <h1>My app</h1>
+                <FeedbackItem />
             </div>
         </>
     )
