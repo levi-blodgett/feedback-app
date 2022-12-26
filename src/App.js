@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import FeedbackData from './data/FeedbackData'
 // import FeedbackItem from './components/FeedbackItem'
+import FeedbackStats from './components/FeedbackStats'
 import FeedbackList from './components/FeedbackList'
 
 // Create main app using function, not class
@@ -12,7 +13,7 @@ function App() {
 
     const deleteFeedback = (id) => {
         if (window.confirm('Are you sure you want to delete?')) {
-            setFeedback(feedback.filter((item) => item.id != id))
+            setFeedback(feedback.filter((item) => item.id !== id))
         }
     }
 
@@ -22,6 +23,7 @@ function App() {
             <Header />
             {/* className, 'class' is protected */}
             <div className='container'>
+                <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>
         </>
