@@ -1,6 +1,8 @@
 // Import state
 import { useState } from "react";
 // Import card div component
+import Button from "./shared/Button";
+// Import card div component
 import Card from "./shared/Card";
 
 function FeedbackForm() {
@@ -22,7 +24,7 @@ function FeedbackForm() {
             placeholder="Write a review"
             value={text}
           />
-          <button type="submit">Send</button>
+          <Button type="submit">Send</Button>
         </div>
       </form>
     </Card>
