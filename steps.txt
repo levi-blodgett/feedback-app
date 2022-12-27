@@ -32,7 +32,7 @@ Create Card.jsx in /dev to practice conditional styling
 Create Card.jsx in /components/shared to simplify creating card divs
     Holds a conditional className with 'reverse'
         The component needs 'reverse={true}' after the component to enable
-Added back prop-types throughout the components to double-check types of vars
+Add back prop-types throughout the components to double-check types of vars
 Install fontawesome + other icon libraries
     npm i react-icons
     npm start
@@ -44,3 +44,4 @@ Add FeedbackStats.jsx to project and calculate the average rating and reviews
 Add FeedbackForm.jsx so we can create a form to submit
     Created form, not button, attached text to a state in component
 Create Button.jsx in components/shared/ which handles button styling and defaults
+Add Button validation by managing the text's state
