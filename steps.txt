@@ -41,3 +41,5 @@ Add delete feedback functionality to app
     Have to pass handleDelete all the way up the chain to App.js, then use filter() on the array to take it out via it's id
     Called prop drilling, won't have to do this when we implement context API because then we can bring in state to any component we want
 Add FeedbackStats.jsx to project and calculate the average rating and reviews
+Add FeedbackForm.jsx so we can create a form to submit
+    Created form, not button, attached text to a state in component

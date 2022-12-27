@@ -4,6 +4,7 @@ import Header from './components/Header'
 import FeedbackData from './data/FeedbackData'
 // import FeedbackItem from './components/FeedbackItem'
 import FeedbackStats from './components/FeedbackStats'
+import FeedbackForm from './components/FeedbackForm'
 import FeedbackList from './components/FeedbackList'
 
 // Create main app using function, not class
@@ -23,6 +24,7 @@ function App() {
             <Header />
             {/* className, 'class' is protected */}
             <div className='container'>
+                <FeedbackForm />
                 <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>
