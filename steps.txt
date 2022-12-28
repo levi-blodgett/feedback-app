@@ -51,3 +51,6 @@ Add addFeedback function to App.js
 Fade Animation with Framer Motion with FeedbackList
     npm i framer-motion
     Add alternate version for animation in FeedbackList, kinda ugly but the animation is good
+Add Context into app
+    create context/FeedbackContext.jsx
+    Will move all context/state into here once able

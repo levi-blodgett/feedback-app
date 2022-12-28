@@ -5,6 +5,7 @@ import FeedbackData from './data/FeedbackData'
 import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import FeedbackList from './components/FeedbackList'
+import { FeedbackProvider } from './context/FeedbackContext'
 
 // Create main app using function, not class
 function App() {
@@ -26,7 +27,7 @@ function App() {
 
     // Return either a div or a fragment with nested html elements
     return (
-        <>
+        <FeedbackProvider>
             <Header />
             {/* className, 'class' is protected */}
             <div className='container'>
@@ -34,7 +35,7 @@ function App() {
                 <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>
-        </>
+        </FeedbackProvider >
     )
 }
 
