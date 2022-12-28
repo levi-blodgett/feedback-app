@@ -32,8 +32,8 @@ function App() {
             {/* className, 'class' is protected */}
             <div className='container'>
                 <FeedbackForm handleAdd={addFeedback} />
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
+                <FeedbackStats />
+                <FeedbackList handleDelete={deleteFeedback} />
             </div>
         </FeedbackProvider >
     )

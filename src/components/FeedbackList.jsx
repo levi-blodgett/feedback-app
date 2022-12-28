@@ -1,10 +1,14 @@
+// Import useContext and FeedbackContext so we can add to context
+import { useContext } from "react";
+import { FeedbackContext } from "../context/FeedbackContext";
+// Import animation for adding and removing feedback from library
 import { motion, AnimatePresence } from "framer-motion";
-// Import prop-types so we can define type for variables
-import PropTypes from "prop-types";
 // Import FeedbackItem so we can iterate over the list and display each item
 import FeedbackItem from "./FeedbackItem";
 
-function FeedbackList({ feedback, handleDelete }) {
+function FeedbackList({ handleDelete }) {
+  const { feedback } = useContext(FeedbackContext);
+
   if (!feedback || feedback.length === 0) {
     return <p>No Feedback Yet</p>;
   }
@@ -29,27 +33,6 @@ function FeedbackList({ feedback, handleDelete }) {
       </AnimatePresence>
     </div>
   );
-
-  // return without animation
-  // return (
-  //   <div className="feedback-list">
-  //     {feedback.map((item) => (
-  //       <FeedbackItem key={item.id} item={item} handleDelete={handleDelete} />
-  //     ))}
-  //   </div>
-  // );
 }
-
-FeedbackList.propTypes = {
-  // Could do just this, or set the entire shape of the array of objects
-  // feedback: PropTypes.array.isRequired,
-  feedback: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired,
-      rating: PropTypes.number.isRequired,
-    })
-  ),
-};
 
 export default FeedbackList;

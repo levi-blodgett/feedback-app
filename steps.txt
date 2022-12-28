@@ -54,3 +54,5 @@ Fade Animation with Framer Motion with FeedbackList
 Add Context into app
     create context/FeedbackContext.jsx
     Will move all context/state into here once able
+Use context throughout app for components
+    Remove feedback references outside of context, prop-types, etc.

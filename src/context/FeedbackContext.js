@@ -1,7 +1,7 @@
 import { createContext, useState } from 'react'
 
 // Create context
-const FeedbackContext = createContext()
+export const FeedbackContext = createContext()
 
 // Create provider so we can wrap everything in App.js in it
 export const FeedbackProvider = ({ children }) => {
