@@ -1,5 +1,6 @@
-// Import state
-import { useState } from "react";
+// Import useState, useContext, and FeedbackContext so we can add to context
+import { useState, useContext } from "react";
+import { FeedbackContext } from "../context/FeedbackContext";
 // Import card div component
 import RatingSelect from "./RatingSelect";
 // Import card div component
@@ -12,6 +13,8 @@ function FeedbackForm({ handleAdd }) {
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
+
+  const { addFeedback } = useContext(FeedbackContext);
 
   const handleTextChange = (e) => {
     if (text === "") {
@@ -35,7 +38,7 @@ function FeedbackForm({ handleAdd }) {
         rating,
       };
 
-      handleAdd(newFeedback);
+      addFeedback(newFeedback);
 
       setText("");
     }

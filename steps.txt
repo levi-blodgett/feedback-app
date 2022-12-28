@@ -56,3 +56,5 @@ Add Context into app
     Will move all context/state into here once able
 Use context throughout app for components
     Remove feedback references outside of context, prop-types, etc.
+Use context throughout app for functions
+    Remove functions from App.js and added it into context
