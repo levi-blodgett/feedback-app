@@ -45,3 +45,4 @@ Add FeedbackForm.jsx so we can create a form to submit
     Created form, not button, attached text to a state in component
 Create Button.jsx in components/shared/ which handles button styling and defaults
 Add Button validation by managing the text's state
+Add RatingSelect.jsx and integrate into form
