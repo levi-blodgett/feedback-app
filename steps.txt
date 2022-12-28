@@ -51,3 +51,6 @@ Add addFeedback function to App.js
 Fade Animation with Framer Motion with FeedbackList
     npm i framer-motion
     Add alternate version for animation in FeedbackList, kinda ugly but the animation is good
+Add routing into app
+    Not needed but good for learning
+    npm i react-router-dom
