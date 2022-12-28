@@ -22,7 +22,12 @@ export const FeedbackProvider = ({ children }) => {
             rating: 4
         },
     ])
+    const [feedbackEdit, setFeedbackEdit] = useState({
+        item: {},
+        edit: false
+    });
 
+    // Add feedback
     const addFeedback = (newFeedback, id) => {
         // Add random ID to new feedback object
         newFeedback.id = Math.floor(Math.random() * 100000 * Math.random());
@@ -30,6 +35,20 @@ export const FeedbackProvider = ({ children }) => {
         setFeedback([newFeedback, ...feedback]);
     }
 
+    // Set item to be updated
+    const editFeedback = (item) => {
+        setFeedbackEdit({
+            item,
+            edit: true
+        })
+        // set feedback[id].value, etc. to the fields
+        // setFeedback array, inside
+        // const objWithIdIndex = feedback.findIndex((obj) => obj.id === id)
+        // const newFeedback = feedback.splice(objWithIdIndex, 1)
+        // setFeedback([newFeedback])
+    }
+
+    // Delete feedback
     const deleteFeedback = (id) => {
         if (window.confirm('Are you sure you want to delete?')) {
             setFeedback(feedback.filter((item) => item.id !== id))
@@ -38,8 +57,9 @@ export const FeedbackProvider = ({ children }) => {
 
     return <FeedbackContext.Provider value={{
         feedback,
-        deleteFeedback,
-        addFeedback
+        addFeedback,
+        editFeedback,
+        deleteFeedback
     }}>
         {children}
     </FeedbackContext.Provider>

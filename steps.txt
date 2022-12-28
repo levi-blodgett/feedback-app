@@ -58,3 +58,7 @@ Use context throughout app for components
     Remove feedback references outside of context, prop-types, etc.
 Use context throughout app for functions
     Remove functions from App.js and added it into context
+    Remove data directory
+Create edit feedback button and functionality
+    Inside of FeedbackContext
+    Form filling happening later

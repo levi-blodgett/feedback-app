@@ -8,7 +8,7 @@ import Button from "./shared/Button";
 // Import card div component
 import Card from "./shared/Card";
 
-function FeedbackForm({ handleAdd }) {
+function FeedbackForm() {
   const [text, setText] = useState("");
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
