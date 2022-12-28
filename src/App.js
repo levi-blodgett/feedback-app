@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import FeedbackData from './data/FeedbackData'
-// import FeedbackItem from './components/FeedbackItem'
 import FeedbackStats from './components/FeedbackStats'
 import FeedbackForm from './components/FeedbackForm'
 import FeedbackList from './components/FeedbackList'
@@ -11,6 +10,13 @@ import FeedbackList from './components/FeedbackList'
 function App() {
     // Init state
     const [feedback, setFeedback] = useState(FeedbackData)
+
+    const addFeedback = (newFeedback, id) => {
+        // Add random ID to new feedback object
+        newFeedback.id = Math.floor(Math.random() * 100000 * Math.random());
+        // Create new array by adding newFeedback and then using spread operator over existing array
+        setFeedback([newFeedback, ...feedback]);
+    }
 
     const deleteFeedback = (id) => {
         if (window.confirm('Are you sure you want to delete?')) {
@@ -24,7 +30,7 @@ function App() {
             <Header />
             {/* className, 'class' is protected */}
             <div className='container'>
-                <FeedbackForm />
+                <FeedbackForm handleAdd={addFeedback} />
                 <FeedbackStats feedback={feedback} />
                 <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
             </div>
