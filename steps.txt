@@ -48,3 +48,6 @@ Add Button validation by managing the text's state
 Add RatingSelect.jsx and integrate into form
 Add addFeedback function to App.js
     Create unique IDs using Math.random() as well
+Fade Animation with Framer Motion with FeedbackList
+    npm i framer-motion
+    Add alternate version for animation in FeedbackList, kinda ugly but the animation is good
