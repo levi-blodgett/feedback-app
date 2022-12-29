@@ -28,7 +28,7 @@ export const FeedbackProvider = ({ children }) => {
     });
 
     // Add feedback
-    const addFeedback = (newFeedback, id) => {
+    const addFeedback = (newFeedback) => {
         // Add random ID to new feedback object
         newFeedback.id = Math.floor(Math.random() * 100000 * Math.random());
         // Create new array by adding newFeedback and then using spread operator over existing array
@@ -41,11 +41,6 @@ export const FeedbackProvider = ({ children }) => {
             item,
             edit: true
         })
-        // set feedback[id].value, etc. to the fields
-        // setFeedback array, inside
-        // const objWithIdIndex = feedback.findIndex((obj) => obj.id === id)
-        // const newFeedback = feedback.splice(objWithIdIndex, 1)
-        // setFeedback([newFeedback])
     }
 
     // Delete feedback
@@ -59,7 +54,8 @@ export const FeedbackProvider = ({ children }) => {
         feedback,
         addFeedback,
         editFeedback,
-        deleteFeedback
+        deleteFeedback,
+        feedbackEdit
     }}>
         {children}
     </FeedbackContext.Provider>

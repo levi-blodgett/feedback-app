@@ -1,5 +1,5 @@
-// Import useState, useContext, and FeedbackContext so we can add to context
-import { useState, useContext } from "react";
+// Import use* and FeedbackContext so we can add to context
+import { useState, useContext, useEffect } from "react";
 import { FeedbackContext } from "../context/FeedbackContext";
 // Import card div component
 import RatingSelect from "./RatingSelect";
@@ -14,7 +14,16 @@ function FeedbackForm() {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
-  const { addFeedback } = useContext(FeedbackContext);
+  // Import add feedback function and feedbackEdit object
+  const { addFeedback, feedbackEdit } = useContext(FeedbackContext);
+
+  useEffect(() => {
+    if (feedbackEdit.edit === true) {
+      setBtnDisabled(false);
+      setText(feedbackEdit.item.text);
+      setRating(feedbackEdit.item.rating);
+    }
+  }, [feedbackEdit]);
 
   const handleTextChange = (e) => {
     if (text === "") {
