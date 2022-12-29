@@ -1,19 +1,22 @@
 // Import useContext and FeedbackContext so we can add to context
 import { useContext } from "react";
 import { FeedbackContext } from "../context/FeedbackContext";
+// Import spinner component
+import Spinner from "./shared/Spinner";
 // Import animation for adding and removing feedback from library
 import { motion, AnimatePresence } from "framer-motion";
 // Import FeedbackItem so we can iterate over the list and display each item
 import FeedbackItem from "./FeedbackItem";
 
 function FeedbackList() {
-  const { feedback } = useContext(FeedbackContext);
+  const { feedback, isLoading } = useContext(FeedbackContext);
 
-  if (!feedback || feedback.length === 0) {
+  if (!isLoading && (!feedback || feedback.length === 0)) {
     return <p>No Feedback Yet</p>;
   }
-
-  return (
+  return isLoading ? (
+    <Spinner />
+  ) : (
     <div className="feedback-list">
       <AnimatePresence>
         {feedback.map((item) => (
