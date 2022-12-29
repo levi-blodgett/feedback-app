@@ -65,3 +65,7 @@ Create edit feedback button and functionality
 Create form filling functionality
     Mostly done in FeedbackForm
 Add actual update feedback functionality after editing
+Build, serve, and deploy to Netlify
+    npm run build
+    npm i -g serve
+    serve -s build
