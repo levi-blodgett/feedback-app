@@ -14,6 +14,11 @@
       "id": 3,
       "rating": 5,
       "text": "Item 3 from backend"
+    },
+    {
+      "text": "This is a new one",
+      "rating": 5,
+      "id": 4
     }
   ]
 }
